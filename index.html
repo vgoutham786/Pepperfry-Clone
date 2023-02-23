@@ -6,184 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOUSICON</title>
-    <style>
-        body {
-            padding: 0;
-            margin: 0;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        #nav {
-
-            margin: auto;
-            display: flex;
-            justify-content: space-around;
-            font-size: 12px;
-            font-family: sans-serif;
-
-            align-items: center;
-            background-color: #f5f5f5;
-
-
-
-        }
-
-        #nav>div {
-            display: flex;
-            /* justify-content: space-between; */
-            align-items: center;
-
-        }
-
-        #lefttop {
-            width: 70%;
-
-        }
-
-        #lefttop>a {
-            margin-right: 15px;
-            text-decoration: none;
-            color: #131313;
-            font-weight: 400;
-        }
-
-        #top {
-            width: 90%;
-            margin: auto;
-
-            display: flex;
-            /* justify-content: space-between; */
-
-            align-items: center;
-            padding: 10px 0%;
-
-        }
-
-        #top>div {
-            display: flex;
-            /* margin: auto; */
-            /* justify-content: space-between; */
-
-
-
-
-        }
-
-        #top>div>button {
-            border-radius: 15px;
-            height: 30px;
-            padding: 0% 5%;
-            margin: auto;
-        }
-
-        #top>:nth-child(3)>img {
-            margin: 5%;
-        }
-
-        #hover>a {
-            text-decoration: none;
-            color: #131313;
-
-            margin: 14px 0px;
-        }
-
-        #hover {
-            width: 90%;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        #image {
-            width: 90%;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-
-        }
-
-        #slide>img {
-            width: 100%;
-
-        }
-
-        #slide {
-            width: 180%;
-            margin-right: 30px;
-        }
-
-        .textimage {
-            width: 90%;
-            margin: auto;
-
-        }
-
-        .textimage>div {
-            display: flex;
-
-        }
-
-        .textimage>div>div {
-            width: 23%;
-            margin-right: 2%;
-
-        }
-
-        .textimage img {
-            width: 100%;
-        }
-
-        /* .textimage h1 {
-            text-align: center;
-        } */
-
-        .textimage p {
-            margin: 1% 0% 2% 3%;
-            font-size: 20px;
-        }
-
-        .trends {
-            width: 90%;
-            margin: auto;
-        }
-
-        .trends>div {
-            display: flex;
-
-        }
-
-        .trends>div>div {
-            width: 33%;
-            margin-right: 2%;
-
-        }
-
-        .trends img {
-            width: 100%;
-        }
-
-        .trends>div>div>img+p {
-            font-size: 20px;
-            font-weight: 600;
-        }
-
-        .trends p {
-            margin: 1% 0% 2% 3%;
-        }
-
-        .trends>div>div>p+p {
-            color: #acacac;
-
-        }
-
-        .textimage>div>div>p~p {
-            color: #acacac;
-            font-size: 16px;
-        }
-    </style>
+    <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
@@ -197,19 +20,20 @@
         </div>
         <div>
             <p>Enter pincode</p>
-            <a href="" style="margin-left: 20px;">Find Housicon studio</a>
+            <a href="" style="margin-left: 20px;color: #FF7035;">Find Housicon studio</a>
         </div>
     </div>
     <div id="top">
         <div style="margin-right: -20%;">
             <img src="./Screenshot 2023-02-22 162728.png" alt="" style="width:30%;">
         </div>
-        <div style="margin-right: 30px;">
-            <input type="text" placeholder="Your door to happiness opens with a search" style="width
-        :750px;padding: 12px 34px 12px 12px;">
+        <div style="margin-right: 30px; ">
+            <input type="text" placeholder="Your door to happiness opens with a search" class="input" style="width
+        :750px;padding: 12px 34px 12px 12px;border: 0px; background-color:  #f5f5f5;">
+
         </div>
         <div>
-            <button>HELP</button>
+            <button style="background-color: transparent;">HELP</button>
             <img src="./Screenshot 2023-02-22 162310.png" alt="" style="width:20%">
             <img src="./Screenshot 2023-02-22 162357.png" alt="" style="width:20%">
             <img src="./Screenshot 2023-02-22 162412.png" alt="" style="width:20%">
@@ -218,8 +42,18 @@
 
 
     </div>
-    <div id="hover">
-        <a href="">Furniture</a>
+    <div id="dropdown">
+        <div class="furniture">
+            <a href="">Furniture</a>
+            <!-- <ul>
+                <li><a href="#">Sofas</a></li>
+                <li><a href="#">3 Seater Sofas</a></li>
+                <li><a href="#">2 Seater Sofas</a></li>
+                <li><a href="#">1 seater Sofas</a></li>
+
+            </ul> -->
+        </div>
+
         <a href="">Home Décor</a>
         <a href="">Lamps & Lighting
         </a>
@@ -228,7 +62,7 @@
         <a href="">Furnishings</a>
         <a href="">Mattresses</a>
         <a href="">Appliances</a>
-        <a href="">Pets
+        <a href="./pet.html">Pets
         </a>
         <a href="">Modular
         </a>
@@ -295,22 +129,7 @@
     <div class="textimage">
         <h1>Inspire and Get Inspired</h1>
         <div>
-            <div>
-                <img src="https://ii2.pepperfry.com/media/wysiwyg/banners/Hp_section4_web_04012023_1.jpg" alt="">
-                <p>Shop Living Room →</p>
-            </div>
-            <div>
-                <img src="https://ii2.pepperfry.com/media/wysiwyg/banners/Hp_section4_web_04012023_1.jpg" alt="">
-                <p>Shop Living Room →</p>
-            </div>
-            <div>
-                <img src="https://ii2.pepperfry.com/media/wysiwyg/banners/Hp_section4_web_04012023_1.jpg" alt="">
-                <p>Shop Living Room →</p>
-            </div>
-            <div>
-                <img src="https://ii2.pepperfry.com/media/wysiwyg/banners/Hp_section4_web_04012023_1.jpg" alt="">
-                <p>Shop Living Room →</p>
-            </div>
+            <img src="./Screenshot 2023-02-23 141038.png" alt="">
         </div>
     </div>
     <div class="trends">
@@ -436,21 +255,24 @@
         <div>
             <div>
                 <img src="https://ii1.pepperfry.com/media/wysiwyg/banners/Testimonial_web_261221_7.jpg" alt="">
-                <p style="color: #131313; font-weight: 540;">Bought these two grey puffy stools from pepperfry. Found
+                <p style="color: #131313; font-weight: 500; font-size: 16px;">Bought these two grey puffy stools from
+                    pepperfry. Found
                     them to be surprisingly...</p>
                 <p style="color: #131313; font-weight: 400;">Suman Senapatiya</p>
                 <p>Visakapattanam</p>
             </div>
             <div>
                 <img src="https://ii3.pepperfry.com/media/wysiwyg/banners/happy_customer_block_2_2906_0222.png" alt="">
-                <p style="color: #131313; font-weight: 540;">I purchased Candy Study Chair in Pink Colour by Alex Daisy
+                <p style="color: #131313; font-weight: 500; font-size: 16px;">I purchased Candy Study Chair in Pink
+                    Colour by Alex Daisy
                     from pepperfry looks awesome and...</p>
                 <p style="color: #131313; font-weight: 400;">Sathya Madhana</p>
                 <p>Secundrabad</p>
             </div>
             <div>
                 <img src="https://ii2.pepperfry.com/media/wysiwyg/banners/Testimonial_web_261221_9.jpg" alt="">
-                <p style="color: #131313; font-weight: 540;">Purchased an ergonomic chair, I thought it would not be
+                <p style="color: #131313; font-weight: 500; font-size: 16px;">Purchased an ergonomic chair, I thought it
+                    would not be
                     fitting for me but once it got...</p>
                 <p style="color: #131313; font-weight: 400;">Baba Kattubadi</p>
                 <p>Hyderbad</p>
@@ -458,6 +280,178 @@
 
         </div>
     </div>
+    <div class="needhelp">
+        <div>
+            <h1>Need Help Buying?</h1>
+            <p style="color: #FF7035; font-size: 20px; font-weight: 600;">View all</p>
+        </div>
+        <div>
+            <div>
+                <img src="https://ii1.pepperfry.com/media/wysiwyg/banners/hp_need_help_p_1.jpg" alt="">
+                <p>Here's How To Choose The Right Sofa</p>
+            </div>
+            <div>
+                <img src="https://ii2.pepperfry.com/media/wysiwyg/banners/hp_need_help_p_2.jpg" alt="">
+                <p>How To Buy A Perfect Bed For Your Room</p>
+            </div>
+            <div>
+                <img src="https://ii3.pepperfry.com/media/wysiwyg/banners/hp_need_help_p_3.jpg" alt="">
+                <p>Your Guide To Buy The Perfect Mattress</p>
+            </div>
+            <div>
+                <img src="https://ii1.pepperfry.com/media/wysiwyg/banners/hp_need_help_p_4.jpg" alt="">
+                <p>Everything About Cabinets And...</p>
+            </div>
+            <div>
+                <img src="https://ii2.pepperfry.com/media/wysiwyg/banners/hp_need_help_p_5.jpg" alt="">
+                <p>What To Look For While Buying A Chair</p>
+            </div>
+            <div>
+                <img src="https://ii3.pepperfry.com/media/wysiwyg/banners/hp_need_help_p_6.jpg" alt="">
+
+            </div>
+
+        </div>
+    </div>
+    <div class="needhelp">
+
+        <h1>Recommeded for you</h1>
+
+
+        <div>
+            <div>
+                <img src="https://ii1.pepperfry.com/media/catalog/product/m/o/494x544/moana-large-bed-with-round-bolster-in-faux-fur-by-house-of-furry-moana-large-bed-with-round-bolster--rjtkn2.jpg"
+                    alt="">
+                <p>Moana Large Bed wit...</p>
+                <p style="color: #FF7035;">₹1,899</p>
+
+            </div>
+            <div>
+                <img src="https://ii1.pepperfry.com/media/catalog/product/m/o/494x544/moana-large-bed-with-round-bolster-in-faux-fur-by-house-of-furry-moana-large-bed-with-round-bolster--rjtkn2.jpg"
+                    alt="">
+                <p>Moana Medium Bed w...</p>
+                <p style="color: #FF7035;">₹1,699</p>
+            </div>
+            <div>
+                <img src="https://ii1.pepperfry.com/media/catalog/product/m/o/494x544/moana-large-bed-with-round-bolster-in-faux-fur-by-house-of-furry-moana-large-bed-with-round-bolster--rjtkn2.jpg"
+                    alt="">
+                <p>Moana Small Bed wit...</p>
+                <p style="color: #FF7035;">₹1,499</p>
+            </div>
+            <div>
+                <img src="https://ii1.pepperfry.com/media/catalog/product/s/i/494x544/simba-large-pet-bed-with-bolster-in-turkish-velvet-by-house-of-furry-simba-large-pet-bed-with-bolste-cshbov.jpg"
+                    alt="">
+                <p>Simba Large Pet Bed </p>
+                <p style="color: #FF7035;">₹1,899</p>
+            </div>
+            <div>
+                <img src="https://ii1.pepperfry.com/media/catalog/product/s/i/494x544/simba-large-pet-bed-with-bolster-in-turkish-velvet-by-house-of-furry-simba-large-pet-bed-with-bolste-cshbov.jpg"
+                    alt="">
+                <p>Simba Medium Pet Bed </p>
+                <p style="color: #FF7035;">₹1,899</p>
+            </div>
+            <div>
+                <img src="https://ii1.pepperfry.com/media/catalog/product/s/i/494x544/simba-large-pet-bed-with-bolster-in-turkish-velvet-by-house-of-furry-simba-large-pet-bed-with-bolste-cshbov.jpg"
+                    alt="">
+                <p>Simba Small Pet Bed </p>
+                <p style="color: #FF7035;">₹1,899</p>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Useful links</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Corporate Goverence</a></li>
+                        <li><a href="#">Housicon in the news</a></li>
+                        <li><a href="#">Find a studio</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                        <li><a href="#">Brands</a></li>
+                        <li><a href="#">Customer Reviews</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Partners</h4>
+                    <ul>
+                        <li><a href="#">Sell with Us</a></li>
+                        <li><a href="#">Become a Franchise</a></li>
+                        <li><a href="#">Become a pep homie</a></li>
+                        <li><a href="#">Design For Us</a></li>
+                        <li><a href="#">Housicon Marketplace Policies</a></li>
+                        <li><a href="#">Login into merchant dashboard</a></li>
+                        <li><a href="#">Important: GST and You</a></li>
+                        <li><a href="#">Corporate Enquires</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Need Help?</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Returns & Refund</a></li>
+                        <li><a href="#">Track Your Order</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Buy on Phone</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Download App</h4>
+
+                    <img src="./Screenshot 2023-02-23 163253.png" alt="">
+
+                </div>
+            </div>
+            <div class="footer-text">
+                <div>
+                    <h4>Popular Categories</h4>
+                    <p>Queen Size Beds, King Size Beds, Coffee Tables, Dining Sets, Recliners, Sofa cum Beds, Rocking
+                        Chairs, Cabinets, Book Shelves, TV Unit, Wardrobes, Outdoor Furniture, Bar Cabinets, Wall
+                        Shelves,
+                        Photo Frames, Bed Sheets, Mattresses, Table Cloth, Living Room Furniture, Study Tables, Dining
+                        Room
+                        Furniture, Office Furniture, Bed Room Furniture, Dining Table, Beds, Sofas, Sofa Set, Trundle
+                        Bed
+                    </p>
+                </div>
+                <div>
+                    <h4>Popular Brands</h4>
+                    <p>Mintwud, Woodsworth, CasaCraft, Amberville, Mudramark, Bohemiana, Clouddio, Spacewood, Durian,
+                        Green
+                        Soul, Godrej Interio, Nilkamal, Orange Tree , HomeTown , Duroflex , Sleepyhead , Peps India ,
+                        NestAsia , Jaipur Rugs , Obettee , Eliante by Jainsons , @Home, Kapoor E Illuminaton ,
+                        Ellementry ,
+                        Chumbak , Philips , Jaipur Fabric , Maspar , India Circus by Krsnaa Mehta</p>
+                </div>
+                <div>
+                    <h4>Cities we deliver to</h4>
+                    <p>Bengaluru, Mumbai, Navi Mumbai, Delhi, Hyderabad, Pune, Chennai, Gurgaon, Kolkata, Noida, Goa,
+                        Ghaziabad, Ahmedabad, Coimbatore, Faridabad, Jaipur, Lucknow, Kochi, Visakhapatnam, Chandigarh,
+                        Vadodara, Nagpur, Thiruvananthapuram, Indore, Mysore, Bhopal, Surat, Jalandhar, Patna, Ludhiana,
+                        Nashik, Madurai, Kanpur, Aurangabad and many more</p>
+                </div>
+            </div>
+            <img src="./Screenshot 2023-02-23 165422.png" alt="" style="width: 90%;margin: auto 40px;">
+            <div class="end-footer">
+                <div>
+                    <a href="#">Buy in Bulk</a>
+                    <a href="#">Write a Testimonial</a>
+                </div>
+                <div>
+                    <a href="#">Whitehat</a><a href="">Site Map</a><a href="">Terms of Use</a><a href="">Privacy
+                        Policy</a><a href="">Your Data & Security</a><a href="">Grievence Redressal</a>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </footer>
 </body>
 
 </html>
