@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+#nav {
+
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+    font-family: 'Manrope', sans-serif;
+
+    align-items: center;
+    background-color: #f5f5f5;
+
+
+
+}
+
+#nav>div {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+
+
+}
+
+#nav a:hover {
+    color: #FF7035;
+}
+
+#lefttop {
+    width: 70%;
+
+}
+
+#lefttop>a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #131313;
+    font-weight: 400;
+}
+
+#top {
+    width: 90%;
+    margin: auto;
+
+    display: flex;
+    /* justify-content: space-between; */
+
+    align-items: center;
+    padding: 10px 0%;
+
+}
+
+#top>div {
+    display: flex;
+    /* margin: auto; */
+    /* justify-content: space-between; */
+
+
+
+
+}
+
+#top>div>button {
+    border-radius: 15px;
+    height: 30px;
+    padding: 0% 5%;
+    margin: auto;
+}
+
+#top>:nth-child(3)>img {
+    margin: 5%;
+}
+
+#dropdown>a {
+    text-decoration: none;
+    color: #131313;
+
+    margin: 14px 0px;
+}
+#dropdown>a:hover{
+    border-bottom: 3px solid red ;
+}
+
+#dropdown {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#image {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#slide>img {
+    width: 100%;
+
+}
+
+#slide {
+    width: 180%;
+    margin-right: 30px;
+}
+
+.textimage {
+    width: 90%;
+    margin: auto;
+
+}
+
+.textimage>div {
+    display: flex;
+
+}
+
+.textimage>div>div {
+    width: 23%;
+    margin-right: 2%;
+
+}
+
+.textimage img {
+    width: 100%;
+}
+
+/* .textimage h1 {
+    text-align: center;
+} */
+
+.textimage p {
+    margin: 1% 0% 2% 3%;
+    font-size: 20px;
+}
+
+.trends {
+    width: 90%;
+    margin: auto;
+}
+
+.trends>div {
+    display: flex;
+
+}
+
+.trends>div>div {
+    width: 33%;
+    margin-right: 2%;
+
+}
+
+.trends img {
+    width: 100%;
+}
+
+.trends>div>div>img+p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.trends p {
+    margin: 1% 0% 2% 3%;
+}
+
+.trends>div>div>p+p {
+    color: #acacac;
+
+}
+
+.textimage>div>div>p~p {
+    color: #acacac;
+    font-size: 16px;
+}
+
+.needhelp>div {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.needhelp {
+    width: 90%;
+    margin: auto;
+}
+
+.needhelp>div:nth-child(2) {
+    /* width: 16%; */
+    margin-right: 1%;
+
+}
+
+.needhelp img {
+    width: 95%;
+}
+
+.container {
+    /* max-width: 1170px; */
+    width: 90%;
+    margin: auto;
+    padding: 3% 0%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer {
+    background-color: #f3f5f7;
+    /* padding: 70px 0; */
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: black;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    margin-left: 33px;
+    position: relative;
+}
+
+
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+
+
+
+
+/*responsive*/
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
+
+.footer-text {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+
+
+}
+
+.footer-text>div {
+    width: 33%;
+}
+
+.footer-text p {
+    color: #bbbbbb;
+    font-size: 12px;
+}
+
+.end-footer {
+    width: 90%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.end-footer a {
+    text-decoration: none;
+    color: #bbbbbb;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+/* .input:focus{
+    border: 3px solid red;
+    background-color: #fff
+} */
