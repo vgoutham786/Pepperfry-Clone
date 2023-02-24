@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+#nav {
+
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+    font-family: 'Manrope', sans-serif;
+
+    align-items: center;
+    background-color: #f5f5f5;
+
+
+
+}
+
+#nav>div {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+
+
+}
+
+#nav a:hover {
+    color: #FF7035;
+}
+
+#lefttop {
+    width: 70%;
+
+}
+
+#lefttop>a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #131313;
+    font-weight: 400;
+}
+
+#top {
+    width: 90%;
+    margin: auto;
+
+    display: flex;
+    /* justify-content: space-between; */
+
+    align-items: center;
+    padding: 10px 0%;
+
+}
+
+#top>div {
+    display: flex;
+    /* margin: auto; */
+    /* justify-content: space-between; */
+
+
+
+
+}
+
+#top>div>button {
+    border-radius: 15px;
+    height: 30px;
+    padding: 0% 5%;
+    margin: auto;
+}
+
+#top>:nth-child(3)>img {
+    margin: 5%;
+}
+
+#dropdown>a {
+    text-decoration: none;
+    color: #131313;
+
+    margin: 14px 0px;
+}
+
+#dropdown>a:hover {
+    border-bottom: 3px solid red;
+}
+
+#dropdown {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.details {
+    width: 80%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+#line {
+    width: 90%;
+    margin: auto;
+}
+
+.details img {
+    width: 100%
+}
+
+#middle {
+    width: 90%;
+    margin: 2% auto;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid #f4f4f4;
+    padding: 3% 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+#middle-top {
+    text-align: center;
+}
+
+ul>li {
+    list-style: none;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: 400;
+    line-height: 14px;
+}
+
+ul {
+    /* border: 1px solid black; */
+    border-left: 0;
+    padding-left: 0;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin: 30% 0%;
+    padding-right: 0%;
+
+}
+
+.left-sort>div {
+    border: 2px solid #f4f4f4;
+    border-left: 0;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+#parag {
+    width: 90%;
+    margin: 5% auto;
+}
+
+.para>p~p {
+    font-size: 13px;
+    font-weight: 400;
+    color: #848484;
+    /* border: 1px solid red; */
+}
+
+.para>:nth-child(1) {
+    font-weight: 700;
+}
+
+.container {
+    /* max-width: 1170px; */
+    width: 90%;
+    margin: auto;
+    padding: 3% 0%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer {
+    background-color: #f3f5f7;
+    /* padding: 70px 0; */
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: black;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    margin-left: 33px;
+    position: relative;
+}
+
+
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+
+
+
+
+/*responsive*/
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
+
+.footer-text {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+
+
+}
+
+.footer-text>div {
+    width: 33%;
+}
+
+.footer-text p {
+    color: #bbbbbb;
+    font-size: 12px;
+}
+
+.end-footer {
+    width: 90%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.end-footer a {
+    text-decoration: none;
+    color: #bbbbbb;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.details>div>img+h4 {
+    font-size: 14px;
+    font-weight: 500;
+    /* border: 1px solid red; */
+    margin: 4% 0;
+}
+
+.details>div>h4+p {
+    font-size: 12px;
+    color: #848484;
+    margin: 4% 0;
+}
+
+.details>div>:nth-child(4) {
+    font-size: 16px;
+    color: #FF7035;
+    margin: 4% 0;
+}
+
+.details>div>:nth-child(5) {
+    font-size: 12px;
+    color: #67AD5B;
+    margin: 4% 0;
+}
+
+.details>div>:nth-child(6) {
+    font-size: 12px;
+    color: #121212;
+    margin: 4% 0;
+}
