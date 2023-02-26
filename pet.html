@@ -28,7 +28,8 @@
     </div>
     <div id="top">
         <div style="margin-right: -20%;">
-            <img src="./Screenshot 2023-02-22 162728.png" alt="" style="width:30%;">
+            <a href="./index.html"><img src="./Screenshot 2023-02-22 162728.png" alt="" style="width:30%;"></a>
+
         </div>
         <div style="margin-right: 30px; ">
             <input type="text" placeholder="Your door to happiness opens with a search" class="input" style="width
@@ -46,16 +47,16 @@
 
     </div>
     <div id="dropdown">
-        <div class="furniture">
-            <a href="">Furniture</a>
-            <!-- <ul>
+
+        <a href="">Furniture</a>
+        <!-- <ul>
                 <li><a href="#">Sofas</a></li>
                 <li><a href="#">3 Seater Sofas</a></li>
                 <li><a href="#">2 Seater Sofas</a></li>
                 <li><a href="#">1 seater Sofas</a></li>
 
             </ul> -->
-        </div>
+
 
         <a href="">Home Décor</a>
         <a href="">Lamps & Lighting
@@ -147,10 +148,15 @@
                     <p>Fluffy fur Ball</p>
                     <p>10+ Cat Grooming</p>
                 </div>
+
                 <div>
-                    <img src="https://ii1.pepperfry.com/media/wysiwyg/banners/pets_section4_web_21092022_2.jpg" alt="">
-                    <p>Sleep Sweet Kitty</p>
-                    <p>5+ Cat Beds</p>
+                    <a href="./addToCart.html">
+                        <img src="https://ii1.pepperfry.com/media/wysiwyg/banners/pets_section4_web_21092022_2.jpg"
+                            alt="">
+                        <p>Sleep Sweet Kitty</p>
+                        <p>5+ Cat Beds</p>
+                    </a>
+
                 </div>
                 <div>
                     <img src="https://ii1.pepperfry.com/media/wysiwyg/banners/pets_section4_web_21092022_3.jpg" alt="">
@@ -381,3 +387,18 @@
 </body>
 
 </html>
+<script>
+   
+    var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    console.log(1)
+    document.querySelector("#nav").style.top = "0";
+  } else {
+    document.querySelector("#nav").style.top = "-500px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>

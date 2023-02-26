@@ -308,3 +308,190 @@ ul {
     color: #121212;
     margin: 4% 0;
 }
+
+.details button {
+    padding: 2% 3%;
+    color: white;
+    border: 0px;
+    background-color: #FF7035;
+    margin: 1% 5% 3% 35%;
+    display: none;
+}
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% 5% auto 40%;
+    /* 15% from the top and centered */
+    /* padding-right: 20px; */
+    border: 1px solid #888;
+    width: 60%;
+    /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.group {
+    position: relative;
+}
+
+.input {
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid #515151;
+    background: transparent;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.modal label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.input:focus~label,
+.input:valid~label {
+    top: -20px;
+    font-size: 14px;
+    color: #bbbbbb;
+}
+
+.bar {
+    position: relative;
+    display: block;
+    width: 200px;
+}
+
+.bar:before,
+.bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #FF7035;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+    left: 50%;
+}
+
+.bar:after {
+    right: 50%;
+}
+
+.input:focus~.bar:before,
+.input:focus~.bar:after {
+    width: 50%;
+}
+
+.highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.input:focus~.highlight {
+    animation: inputHighlighter 0.3s ease;
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: #FF7035;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+#carttop{
+    background-color: #121212;
+    color: white;
+}
+#carttop button{
+    border: 0 ;
+    color: white;
+    background-color: #121212;
+    margin: 3% 2% 0 2%;
+    padding: 2% 5%;
+    border-radius: 5px 5px 0 0;
+}
+
+#cartdetail a{
+    margin: 3% 5%;
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+#carttop p+button{
+    color: black;
+    background-color: white; 
+}
+#cartdetail>div{
+    margin: 2%;
+}
+#cartdetail>button{
+    width: 95%;
+    margin: 10px 0 20px 20px;
+    padding: 2% 5%;
+    background-color: #FF7035;
+    color: white;
+    border: 0;
+
+}
+

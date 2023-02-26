@@ -25,7 +25,10 @@
     </div>
     <div id="top">
         <div style="margin-right: -20%;">
-            <img src="./Screenshot 2023-02-22 162728.png" alt="" style="width:30%;">
+            <a href="./index.html">
+                <img src="./Screenshot 2023-02-22 162728.png" alt="" style="width:30%;">
+            </a>
+
         </div>
         <div style="margin-right: 30px; ">
             <input type="text" placeholder="Your door to happiness opens with a search" class="input" style="width
@@ -36,23 +39,23 @@
             <button style="background-color: transparent;">HELP</button>
             <img src="./Screenshot 2023-02-22 162310.png" alt="" style="width:20%">
             <img src="./Screenshot 2023-02-22 162357.png" alt="" style="width:20%">
-            <img src="./Screenshot 2023-02-22 162412.png" alt="" style="width:20%">
+            <img id="discart" src="./Screenshot 2023-02-22 162412.png" alt="" style="width:20%">
         </div>
 
 
 
     </div>
     <div id="dropdown">
-        <div class="furniture">
-            <a href="">Furniture</a>
-            <!-- <ul>
+
+        <a href="">Furniture</a>
+        <!-- <ul>
                 <li><a href="#">Sofas</a></li>
                 <li><a href="#">3 Seater Sofas</a></li>
                 <li><a href="#">2 Seater Sofas</a></li>
                 <li><a href="#">1 seater Sofas</a></li>
 
             </ul> -->
-        </div>
+
 
         <a href="">Home Décor</a>
         <a href="">Lamps & Lighting
@@ -79,6 +82,28 @@
         </a>
 
     </div>
+    <div id="myModal1" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span id="close" class="close">&times;</span>
+            <div id="addc">
+                <div id="carttop">
+                    <p style="margin-top: 0;
+                    padding: 2% 5%;">Show Availability At <input type="text"> Check</p>
+                    <button>My Cart</button>
+                    <button>Wishlist</button>
+                    <button>Recently Viewed</button>
+                </div>
+                <div id="cartdetail">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
     <div id="middle">
         <div class="left-sort">
             <div>
@@ -86,10 +111,12 @@
                     <li><input type="checkbox" value="relevance" name="pricerel">
                         <label for="pricerel"> Relavance</label><br>
                     </li>
-                    <li><input type="checkbox" value="low" placeholder="Low to high" name="priceasc">
+                    <li><input type="checkbox" value="low" placeholder="Low to high" name="priceasc" id="low"
+                            onclick="myFunction()">
                         <label for="priceasc"> Low to high</label><br>
                     </li>
-                    <li><input type="checkbox" value="high" placeholder="Low to high" name="pricedes">
+                    <li><input type="checkbox" value="high" placeholder="Low to high" name="pricedes" id="high"
+                            onclick="myFunction1()">
                         <label for="price"> High to Low</label><br>
                     </li>
                     <li><input type="checkbox" value="fastest" placeholder="Low to high" name="pricefa">
@@ -183,6 +210,7 @@
             </div>
 
         </div>
+
         <div class="details">
 
         </div>
@@ -331,8 +359,15 @@
 
 </html>
 <script>
+    var modal1 = document.getElementById("myModal1");
+    var span1 = document.getElementById("close");
+    var cartdetail = document.getElementById("cartdetail");
+    let discart = document.getElementById("discart")
+
+    var high = document.getElementById("low")
+
     let cart = JSON.parse(localStorage.getItem("cart")) || []
-    let data = [{
+    const data = [{
 
         "name": "Small Pet Hut In Orange & Grey Colour",
         "avatar": "https://ii2.pepperfry.com/media/catalog/product/p/e/494x544/pet-hut-small-in-peach-cream-colour-by-hiputee-pet-hut-small-in-peach-cream-colour-by-hiputee-36hc3t.jpg",
@@ -557,16 +592,134 @@
             des.textContent = element.description;
             addToCart.textContent = "Add To Cart";
 
-            div.append(pic, name, des, price, offer, ship, addToCart)
+            div.append(pic, addToCart, name, des, price, offer, ship,)
             details.append(div)
 
             addToCart.addEventListener("click", () => {
                 cart.push(element);
                 localStorage.setItem("cart", JSON.stringify(cart))
             })
+
+            div.addEventListener("mouseover", () => {
+                addToCart.style.display = "block";
+                div.style.cursor = "pointer"
+            })
+            div.addEventListener("mouseout", () => {
+                addToCart.style.display = "none"
+            })
+            addToCart.onclick = function () {
+                modal1.style.display = "block";
+                cartdisplay(cart)
+                span1.onclick = function () {
+                    modal1.style.display = "none";
+                }
+            }
         });
 
     }
-    display(data)
+
+    discart.onclick = function () {
+        modal1.style.display = "block";
+        cartdisplay(cart)
+        span1.onclick = function () {
+            modal1.style.display = "none";
+        }
+    }
+    // display(data);
+    function cartdisplay(data) {
+
+        cartdetail.innerHTML = ""
+        data.forEach((element, index) => {
+            let div = document.createElement("div");
+            let pic = document.createElement("img");
+            let div1 = document.createElement("div");
+            let name = document.createElement("h4");
+            let price = document.createElement("p");
+            let mtw = document.createElement("a");
+            let rem = document.createElement("a");
+            pic.src = element.avatar;
+            name.textContent = element.name;
+            price.textContent = "Offer Price " + element.price;
+            mtw.textContent = "Move To Wishlist";
+            rem.textContent = "Remove";
+
+            div1.append(name, price, mtw, rem)
+            div.append(pic, div1)
+            cartdetail.append(div)
+
+            pic.style.width = "15%";
+            div.style.display = "flex";
+
+            rem.addEventListener("click", () => {
+                console.log(1)
+                cart.splice(index, 1);
+                localStorage.setItem("cart", JSON.stringify(cart));
+                cartdisplay(cart)
+
+            })
+
+        });
+        let ptp = document.createElement("button");
+        ptp.textContent = "Proceed To Pay";
+        cartdetail.append(ptp)
+
+        ptp.addEventListener("click", () => {
+            console.log(1)
+            location.replace("./payement.html")
+        })
+
+    }
+    data1 = data;
+
+
+
+    display(data);
+    function myFunction() {
+
+        var low = document.getElementById("low")
+        // var text = document.getElementById("text");
+        if (low.checked == true) {
+            // text.style.display = "block";
+            let cart1 = data;
+            cart1 = cart1.sort((a, b) => {
+                return a.price - b.price
+            })
+            console.log(cart1)
+            details.innerHTML = ""
+            display(cart1)
+        } else {
+            details.innerHTML = ""
+
+
+            console.log(data1)
+            display(data1);
+        }
+    }
+    function myFunction1() {
+
+        var high = document.getElementById("high")
+        // var text = document.getElementById("text");
+        if (high.checked == true) {
+            // text.style.display = "block";
+            let cart1 = data;
+            cart1 = cart1.sort((a, b) => {
+                return b.price - a.price
+            })
+            console.log(cart1)
+            details.innerHTML = ""
+            display(cart1)
+        } else {
+            details.innerHTML = ""
+
+
+            console.log(data1)
+            display(data1);
+        }
+    }
+
+
+
+
+
 
 </script>

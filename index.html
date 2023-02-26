@@ -25,7 +25,8 @@
     </div>
     <div id="top">
         <div style="margin-right: -20%;">
-            <img src="./Screenshot 2023-02-22 162728.png" alt="" style="width:30%;">
+            <a href=""><img src="./Screenshot 2023-02-22 162728.png" alt="" style="width:30%;"></a>
+
         </div>
         <div style="margin-right: 30px; ">
             <input type="text" placeholder="Your door to happiness opens with a search" class="input" style="width
@@ -119,7 +120,7 @@
                         </a>
 
                         <div>
-                            <button
+                            <button id="reg"
                                 style="padding:10px 30px;color: #FF7035;background-color: white ; border: 1px solid #bbbbbb;">New
                                 to Housicon? Regester here</button>
                             <img style="width: 50%;display:block ;" src="./Screenshot 2023-02-25 223116.png" alt="">
@@ -133,7 +134,7 @@
 
     </div>
     <div id="dropdown">
-        <div class="furniture">
+        
             <a href="">Furniture</a>
             <!-- <ul>
                 <li><a href="#">Sofas</a></li>
@@ -142,7 +143,7 @@
                 <li><a href="#">1 seater Sofas</a></li>
 
             </ul> -->
-        </div>
+        
 
         <a href="">Home Décor</a>
         <a href="">Lamps & Lighting
@@ -567,6 +568,7 @@
 
     var modal = document.getElementById("myModal");
     var modal1 = document.getElementById("myModal1");
+    let reg = document.getElementById("reg")
 
     // Get the button that opens the modal
     var btn = document.getElementById("myBtn");
@@ -584,7 +586,12 @@
         modal.style.display = "block";
     }
     btn1.onclick = function () {
+        modal.style.display = "none";
         modal1.style.display = "block";
+    }
+    reg.onclick = function () {
+        modal1.style.display = "none";
+        modal.style.display = "block";
     }
 
     // When the user clicks on <span> (x), close the modal
