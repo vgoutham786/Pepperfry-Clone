@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="./payment.css">
+</head>
+
+<body>
+    <div class="nav">
+        <a href="./index.html"><img src="./Housicon.png" alt=""></a>
+
+    </div>
+    <p style="margin-left: 200px;font-size: 20px;font-weight: 700;color: #323232;
+    ">
+        Your Cart(<span id="ite"></span> Items )
+    </p>
+    <div id="middle">
+        <div id="cartdetail">
+
+        </div>
+        <div>
+            <p>Delivering To</p>
+            <input type="number" name="" id="" placeholder="Enter Pin Code" style="padding: 2% 1%;">
+            <p><a href="" style="color:#FF7035 ;">Login Now</a> to add address and Avail offers (Required) </p>
+            <h1 style="font-size: 12px;font-weight: 700; color: #323232;padding: 2% 2% ; border: 1px solid grey;">Apply
+                Coupon
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                ></h1>
+            <div id="middlecart">
+                <h1 style="color: #323232;font-size: 16px; font-weight: 700; text-align: center;">Cart Summary</h1>
+                <p>Items in cart
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:-&nbsp;&nbsp;
+                    <span id="qty"></span>
+                </p>
+                <p>Cart Total Price &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    :-&nbsp;&nbsp;<span id="sum"></span></p>
+                <h4>You Pay
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:-&nbsp;&nbsp;<span
+                        id="pric"></span> </h4>
+
+            </div>
+            <button id="pay">PAY SECURELY</button>
+        </div>
+    </div>
+    <img src="./Screenshot 2023-02-26 174808.png" alt="" style="width: 100%; margin-top: 30px;">
+</body>
+
+</html>
+<script>
+    let cartdetail = document.getElementById("cartdetail");
+    let cart = JSON.parse(localStorage.getItem("cart"));
+    cartdisplay(cart)
+    function cartdisplay(data) {
+
+        cartdetail.innerHTML = ""
+        data.forEach((element, index) => {
+            let div = document.createElement("div");
+            let pic = document.createElement("img");
+            let div2 = document.createElement("div");
+            let div1 = document.createElement("div");
+            let name = document.createElement("h4");
+            let price = document.createElement("p");
+            let qty = document.createElement("select");
+            let op1 = document.createElement("option");
+            let op2 = document.createElement("option")
+            let op3 = document.createElement("option")
+            let op4 = document.createElement("option")
+            let op5 = document.createElement("option")
+            let mtw = document.createElement("button");
+            let rem = document.createElement("button");
+            pic.src = element.avatar;
+            name.textContent = element.name;
+            price.textContent = "Offer Price  ₹" + element.price;
+            mtw.textContent = "Move To Wishlist";
+            rem.textContent = "Delete";
+
+            op1.innerText = "QTY 1"
+            op2.innerText = 1
+            op3.innerText = 2
+            op4.innerText = 3
+            op5.innerText = 4
+
+            qty.append(op1, op2, op3, op4, op5)
+
+            div1.append(name, qty, price)
+            div2.append(pic, mtw, rem)
+            div.append(div2, div1)
+            cartdetail.append(div)
+
+            pic.style.width = "55%";
+            // div.style.display = "flex";
+
+            rem.addEventListener("click", () => {
+                console.log(1)
+                cart.splice(index, 1);
+                localStorage.setItem("cart", JSON.stringify(cart));
+                cartdisplay(cart)
+
+            })
+
+        });
+
+        let quant = document.getElementById("qty");
+        let ite = document.getElementById("ite");
+        let total = document.getElementById("sum");
+        let pric = document.getElementById("pric");
+
+
+        quant.innerText = cart.length;
+        ite.innerText = cart.length
+        let sum = 0;
+        for (let i = 0; i < cart.length; i++) {
+            sum += Number(cart[i].price)
+        }
+
+        total.innerText = "₹" + sum;
+        pric.innerText = "₹" + sum;
+    }
+
+    let pay = document.getElementById("pay");
+    pay.addEventListener("click", () => {
+        alert("Hurray!! Payment SuccessFull Thankyou For Shopping In HOUSICON");
+
+        location.replace("./index.html")
+    })
+</script>

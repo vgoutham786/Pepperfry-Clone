@@ -82,11 +82,13 @@ body {
     margin: 5%;
 }
 
+
 #dropdown>a {
     text-decoration: none;
     color: #131313;
 
     margin: 14px 0px;
+    padding: 1% 0;
 }
 
 #dropdown>a:hover {

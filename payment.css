@@ -1,0 +1,59 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+
+
+.nav img{
+ width: 10%;
+ margin-left: 150px;
+}
+.nav{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+#cartdetail button{
+    margin: 3% 0%;
+    padding: 2% 3%;
+    text-decoration-line: none;
+    cursor: pointer;
+    display: block;
+    background-color: transparent;
+    border: 1px solid gray;
+}
+#cartdetail >div{
+    display: flex;
+    justify-content: space-around;
+}
+#cartdetail{
+    width: 40%;
+    margin-left: 100px;
+}
+#cartdetail img{
+    width: 55%;
+
+}
+#middle{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+#pay{
+    width: 80%;
+    margin: auto;
+    padding: 2% 3%;
+    color: white;
+    background-color: #FF7035;
+    border: 0;
+}
+#middlecart{
+    border: 1px solid gray;
+    padding: 2% 5%;
+    margin: 4% 0;
+}
